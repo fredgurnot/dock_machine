@@ -1,0 +1,7 @@
+.dock-display {
+  margin-top: 40px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  background-color: #eee;
+}

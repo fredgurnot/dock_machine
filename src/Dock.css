@@ -1,0 +1,12 @@
+.dock {
+  display: block;
+  background-color: #ccc;
+  width: 100px;
+  height: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+.expanded {
+  height: 40px;
+}
