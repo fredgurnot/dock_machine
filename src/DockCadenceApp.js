@@ -9,7 +9,7 @@ const DockCadenceApp = () => {
 
 
     useEffect(() => {
-        setCadenceArray(cadenceString.split(',').map(Number));
+        setCadenceArray(cadenceString.split(',').filter( e => e !== "").map(Number));
 
     },[cadenceString]);
 
