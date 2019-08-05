@@ -19,21 +19,22 @@ const DockDisplay = ({cadenceArray}) => {
 
 
     return (
-        <div>
+        <div className="dock-display">
             <div className="meter-input">
-                <label htmlFor="meterThreshold">
-                    Meter Threshold
-                    <input
-                        id="meterThreshold"
-                        value={meterThreshold}
-                        placeholder="Meter Threshold"
-                        onChange={(e) => (setMeterThreshold(e.target.value))}
-                    />
-                </label>
+                <h3> Meter Count </h3>
+                <button
+                    onClick={() => setMeterThreshold(meterThreshold-1)}
+                    className="mc-button"
+                >-</button>
+                <div className="meter-count">{meterThreshold}</div>
+                <button
+                    className="mc-button"
+                    onClick={ () => setMeterThreshold(meterThreshold +1)}
+                >+</button>
 
             </div>
 
-            <div className="dock-display">
+            <div className="docks-container">
                 {
                     meterArray.map((dock, i) => {
                         return (

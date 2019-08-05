@@ -4,7 +4,7 @@ import './DockCadenceApp.css';
 
 const DockCadenceApp = () => {
 
-    const [cadenceString, setCadenceString] = useState("1");
+    const [cadenceString, setCadenceString] = useState("0,1,2,5,9");
     const [cadenceArray, setCadenceArray] = useState([]);
 
 
@@ -15,10 +15,14 @@ const DockCadenceApp = () => {
 
 
     return (
-        <div>
+        <div className="meter-machine">
+            <h1 className="header">Dock Expansion Preview</h1>
+
+            <h3>Audience:</h3>
             <label htmlFor="cadence">
-                Audience: Remaing articles
+                 Remaing articles &nbsp;
                 <input
+                    className="cadence-input"
                     id="cadence"
                     value={cadenceString}
                     placeholder="Meter Cadence"
@@ -28,9 +32,11 @@ const DockCadenceApp = () => {
             <br/>
 
 
-            <DockDisplay
-                cadenceArray={cadenceArray}
-            />
+            <DockDisplay cadenceArray={cadenceArray} />
+            <DockDisplay cadenceArray={cadenceArray} />
+            <DockDisplay cadenceArray={cadenceArray} />
+
+
         </div>
     )
 };

@@ -1,9 +1,28 @@
 .dock-display {
+  background-color: #f2f2f2;
   margin-top: 40px;
-  padding: 20px;
+  padding: 10px 20px;
+  border: #cccccc solid 1px;
+  border-radius: 5px;
+}
+
+.docks-container {
   display: flex;
   flex-direction: row;
-  background-color: #eee;
   align-items: flex-end;
   justify-content: flex-start;
+}
+
+.meter-count {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 0 10px;
+  border: #cccccc solid 1px;
+}
+
+.mc-button {
+  height: 22px;
+  width: 30px;
+  font-size: 14px;
+  margin: 0 10px;
 }
