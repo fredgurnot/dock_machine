@@ -1,3 +1,14 @@
-.meter-input {
-  padding: 20px 0;
+.meter-machine {
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+}
+
+.cadence-input {
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 0 10px;
+  border: #cccccc solid 1px;
 }
