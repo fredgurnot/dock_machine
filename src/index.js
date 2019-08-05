@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import DockCadenceApp from './DockCadenceApp';
 import * as serviceWorker from './serviceWorker';
 
