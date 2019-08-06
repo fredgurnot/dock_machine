@@ -6,7 +6,7 @@ const DockCadenceApp = () => {
 
     const [cadenceString, setCadenceString] = useState("0,1,2,5,9");
     const [cadenceArray, setCadenceArray] = useState([]);
-
+    const [dockDisplay, setDockDisplay] = useState([1]);
 
     useEffect(() => {
         setCadenceArray(cadenceString.split(',').filter( e => e !== "").map(Number));
@@ -18,9 +18,9 @@ const DockCadenceApp = () => {
         <div className="meter-machine">
             <h1 className="header">Dock Expansion Preview</h1>
 
-            <h3>Audience:</h3>
+            <h3>
             <label htmlFor="cadence">
-                 Remaing articles &nbsp;
+                Audience (Remaining articles) &nbsp;
                 <input
                     className="cadence-input"
                     id="cadence"
@@ -29,12 +29,32 @@ const DockCadenceApp = () => {
                     onChange={ (e) => setCadenceString(e.target.value)}
                 />
             </label>
+            </h3>
             <br/>
+            <div className="meter-input">
+                <h3> Dock Views </h3>
+                <button
+                    onClick={() => setDockDisplay(dockDisplay.slice(0, dockDisplay.length-1))}
+                    className="mc-button"
+                >-</button>
+                <div className="meter-count">{dockDisplay.length}</div>
+                <button
+                    className="mc-button"
+                    onClick={ () => setDockDisplay(dockDisplay.concat([1]))}
+                >+</button>
 
+            </div>
 
-            <DockDisplay cadenceArray={cadenceArray} />
-            <DockDisplay cadenceArray={cadenceArray} />
-            <DockDisplay cadenceArray={cadenceArray} />
+            {
+                dockDisplay.map((dock, i) => {
+                    return (
+                        <DockDisplay
+                            cadenceArray={cadenceArray}
+                            key={i}
+                        />
+                    )
+                })
+            }
 
 
         </div>
