@@ -9,11 +9,9 @@ const DockDisplay = ({cadenceArray}) => {
 
     useEffect(() => {
         const arr = [];
-        console.log('meterArray:' + meterArray);
         for (let i = 1; i <= meterThreshold; i++) {
             arr[i-1] = (cadenceArray.indexOf(meterThreshold-i) > -1) ? 1 : 0;
         }
-        console.log('arr:' + arr);
         setMeterArray(arr);
     },[meterThreshold, cadenceArray]);
 
