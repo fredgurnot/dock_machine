@@ -9,40 +9,44 @@ const DockCadenceApp = () => {
     const [dockDisplay, setDockDisplay] = useState([1]);
 
     useEffect(() => {
-        setCadenceArray(cadenceString.split(',').filter( e => e !== "").map(Number));
+        setCadenceArray(cadenceString.split(',').filter(e => e !== "").map(Number));
 
-    },[cadenceString]);
+    }, [cadenceString]);
 
 
     return (
         <div className="meter-machine">
             <h1 className="header">Dock Expansion Preview</h1>
 
-            <h3>
-            <label htmlFor="cadence">
-                Audience (Remaining articles) &nbsp;
-                <input
-                    className="cadence-input"
-                    id="cadence"
-                    value={cadenceString}
-                    placeholder="Meter Cadence"
-                    onChange={ (e) => setCadenceString(e.target.value)}
-                />
-            </label>
-            </h3>
-            <br/>
-            <div className="meter-input">
-                <h3> Dock Views </h3>
-                <button
-                    onClick={() => setDockDisplay(dockDisplay.slice(0, dockDisplay.length-1))}
-                    className="mc-button"
-                >-</button>
-                <div className="meter-count">{dockDisplay.length}</div>
-                <button
-                    className="mc-button"
-                    onClick={ () => setDockDisplay(dockDisplay.concat([1]))}
-                >+</button>
+            <div className="controls">
+                <div className="audience-input">
+                    <h3>Audience as remaining articles</h3>
+                    <label htmlFor="cadence">
 
+                        <input
+                            className="cadence-input"
+                            id="cadence"
+                            value={cadenceString}
+                            placeholder="Meter Cadence"
+                            onChange={(e) => setCadenceString(e.target.value)}
+                        />
+                    </label>
+
+                </div>
+                <div className="views-input">
+                    <h3> Dock Views </h3>
+                    <button
+                        onClick={() => setDockDisplay(dockDisplay.slice(0, dockDisplay.length - 1))}
+                        className="mc-button"
+                    >-
+                    </button>
+                    <div className="meter-count">{dockDisplay.length}</div>
+                    <button
+                        className="mc-button"
+                        onClick={() => setDockDisplay(dockDisplay.concat([1]))}
+                    >+
+                    </button>
+                </div>
             </div>
 
             {

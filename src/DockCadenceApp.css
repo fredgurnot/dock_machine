@@ -1,14 +1,29 @@
 .meter-machine {
   padding: 20px;
+  max-width: 1110px;
+  margin: auto;
 }
 
 .header {
   text-align: center;
 }
 
+.controls {
+  padding: 20px 5px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .cadence-input {
+  height: 22px;
+  line-height: 22px;
   font-size: 14px;
+  letter-spacing: 1px;
   border-radius: 5px;
   padding: 0 10px;
   border: #cccccc solid 1px;
+}
+
+.views-input {
+
 }

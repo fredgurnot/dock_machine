@@ -17,18 +17,19 @@ const DockDisplay = ({cadenceArray}) => {
 
 
     return (
-        <div className="dock-display">
-            <div className="meter-input">
-                <h3> Meter Count </h3>
-                <button
-                    onClick={() => setMeterThreshold(meterThreshold-1)}
-                    className="mc-button"
-                >-</button>
-                <div className="meter-count">{meterThreshold}</div>
-                <button
-                    className="mc-button"
-                    onClick={ () => setMeterThreshold(meterThreshold +1)}
-                >+</button>
+        <div className="dock-display shadow">
+            <div >
+                <h5 className="meter-input">Meter Threshold</h5>
+                    <button
+                        onClick={() => setMeterThreshold(meterThreshold-1)}
+                        className="mc-button"
+                    >-</button>
+                    <div className="meter-count">{meterThreshold}</div>
+                    <button
+                        className="mc-button"
+                        onClick={ () => setMeterThreshold(meterThreshold +1)}
+                    >+</button>
+
 
             </div>
 

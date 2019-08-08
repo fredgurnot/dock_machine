@@ -1,18 +1,19 @@
 .dock {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
-    background-color: #dcc;
-    width: 100px;
+    background-color: #eee;
+    width: 80px;
     height: 20px;
-    margin: 0 10px;
+    margin: 0 10px 10px;
     text-align: center;
     font-size: 14px;
     line-height: 20px;
     border-radius: 3px;
+    border: #cccccc solid 1px;
 }
 
 .expanded {
     height: 40px;
-    background-color: #cdc;
+    background-color: #efe;
 }

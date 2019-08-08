@@ -1,16 +1,17 @@
 .dock-display {
-  background-color: #f2f2f2;
+  background-color: #fff;
   margin-top: 40px;
-  padding: 5px 20px 30px;
-  border: #cccccc solid 1px;
+  padding: 5px 20px 5px;
+  border: #ccc solid 1px;
   border-radius: 5px;
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
 }
 
 .docks-container {
-  margin-left: 30px;
+  margin-top: 20px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -18,8 +19,16 @@
   padding: 15px 0 0;
 }
 
+.meter-input {
+  padding: 0;
+  margin: 5px;
+  text-align: center;
+}
+
 .meter-count {
   display: inline-block;
+  height: 22px;
+  line-height: 22px;
   border-radius: 5px;
   padding: 0 10px;
   border: #cccccc solid 1px;
@@ -30,4 +39,17 @@
   height: 22px;
   width: 30px;
   font-size: 14px;
+  border-radius: 2px;
+}
+
+.shadow {
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         2px 2px 5px 1px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+.shadow-in {
+  -moz-box-shadow:    inset 1px 1px 4px 1px #ccc;
+  -webkit-box-shadow: inset 1px 1px 4px 1px #ccc;
+  box-shadow:         inset 1px 1px 4px 1px #ccc;
 }
