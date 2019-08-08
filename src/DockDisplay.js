@@ -9,28 +9,27 @@ const DockDisplay = ({cadenceArray}) => {
 
     useEffect(() => {
         const arr = [];
-        console.log('meterArray:' + meterArray);
         for (let i = 1; i <= meterThreshold; i++) {
             arr[i-1] = (cadenceArray.indexOf(meterThreshold-i) > -1) ? 1 : 0;
         }
-        console.log('arr:' + arr);
         setMeterArray(arr);
     },[meterThreshold, cadenceArray]);
 
 
     return (
-        <div className="dock-display">
-            <div className="meter-input">
-                <h3> Meter Count </h3>
-                <button
-                    onClick={() => setMeterThreshold(meterThreshold-1)}
-                    className="mc-button"
-                >-</button>
-                <div className="meter-count">{meterThreshold}</div>
-                <button
-                    className="mc-button"
-                    onClick={ () => setMeterThreshold(meterThreshold +1)}
-                >+</button>
+        <div className="dock-display shadow">
+            <div >
+                <h5 className="meter-input">Meter Threshold</h5>
+                    <button
+                        onClick={() => setMeterThreshold(meterThreshold-1)}
+                        className="mc-button"
+                    >-</button>
+                    <div className="meter-count">{meterThreshold}</div>
+                    <button
+                        className="mc-button"
+                        onClick={ () => setMeterThreshold(meterThreshold +1)}
+                    >+</button>
+
 
             </div>
 

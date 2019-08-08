@@ -3,7 +3,7 @@ import './Dock.css';
 
 const Dock = ({isExpanded, mc}) => {
     return (
-        <div className={`dock ${isExpanded ? "expanded" : ""}`}>{`mc= ${mc}`}</div>
+        <div className={`dock ${isExpanded ? "expanded" : ""}`}>{`mc ${mc}`}</div>
     )
 };
 
